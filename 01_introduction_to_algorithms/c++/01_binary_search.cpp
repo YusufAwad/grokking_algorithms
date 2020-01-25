@@ -1,17 +1,17 @@
-#include <iostream.h>
+#include <iostream>
 #include <stdio.h>
 using namespace std;
 
-int binary_search(int list[], int item, bool& isFound){
+int binary_search(int (&list)[5], int item, bool& isFound){
     // low and high keep track of which part of the array you'll search in.
     int low = 0;
     int high = (sizeof(list)/sizeof(*list));
-
+    
     // While you haven't narrowed it down to one element ...
     while(low <= high){
         // ... check the middle element
         int mid = low + ((high - low) / 2);
-        int guess = list[mid]
+        int guess = list[mid];
         // Found the item.
         if (guess == item){
             isFound =  true;

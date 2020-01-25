@@ -1,5 +1,5 @@
 // we read standard input line by line
-func binary_search(list: [Int], item: Int) -> Int? {
+func binary_search(list: [Int], item: Int) -> Int {
 	var low = 0
 	var high = list.count
 	
